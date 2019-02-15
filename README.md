@@ -6,7 +6,7 @@
 ### Local workspace
 
 ```bash
-$ mkdir ~/myapp && cd ~/myapp
+$ mkdir ~/railsmyapp && cd ~/railsmyapp
 $ curl -LO https://raw.githubusercontent.com/bitnami/bitnami-docker-rails/master/docker-compose.yml
 $ docker-compose up
 ```
