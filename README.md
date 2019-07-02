@@ -8,6 +8,7 @@
 ```bash
 $ mkdir ~/railsmyapp && cd ~/railsmyapp
 $ curl -LO https://raw.githubusercontent.com/bitnami/bitnami-docker-rails/master/docker-compose.yml
+$ sudo chmod -R 777 railsmyapp
 $ docker-compose up
 ```
 
