@@ -109,38 +109,38 @@ Following are a few examples of launching some commonly used Rails development c
 - List all available rake tasks:
 
   ```bash
-  $ docker-compose exec railsmyapp bundle exec rake -T
+  $ docker-compose exec myapp bundle exec rake -T
   ```
 
 - Get information about the Rails environment:
 
   ```bash
-  $ docker-compose exec railsmyapp bundle exec rake about
+  $ docker-compose exec myapp bundle exec rake about
   ```
 
 - Launch the Rails console:
 
   ```bash
-  $ docker-compose exec railsmyapp rails console
+  $ docker-compose exec myapp rails console
   ```
 
 - Generate a scaffold:
 
   ```bash
-  $ docker-compose exec railsmyapp rails generate scaffold User name:string email:string
+  $ docker-compose exec myapp rails generate scaffold User name:string email:string
   ```
 
 - Run database migrations:
 
   ```bash
-  $ docker-compose exec railsmyapp bundle exec rake db:migrate
+  $ docker-compose exec myapp bundle exec rake db:migrate
   ```
 
 > **Note**
 >
 > Database migrations are automatically applied during the start up of the Rails Development Container. This means that the `myapp` service could also be restarted to apply the database migrations.
 > ```bash
-> $ docker-compose restart railsmyapp
+> $ docker-compose restart myapp
 > ```
 
 ## Configuring your database:
@@ -199,7 +199,7 @@ For example, to add the `httparty` Rubygem:
 
 ```bash
 $ echo "gem 'httparty'" >> Gemfile
-$ docker-compose restart railsmyapp
+$ docker-compose restart myapp
 ```
 
 When the `myapp` service container is restarted, it will install all the missing gems before starting the WEBrick Rails application server.
